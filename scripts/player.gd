@@ -36,17 +36,20 @@ var footstep_playing = false
 var heart_playing = false
 #game status
 var game_started = true
-
+#blood
+var BLOOD_HIT = preload("res://scenes/effects/Blood_hit.tscn")
 
 func _ready():
 	var camera = Camera2D.new()
 	add_child(camera)
 	camera.current = true
-	camera.zoom = Vector2(0.5,0.5)
+	camera.zoom = Vector2(0.4,0.4)
 
 func _physics_process(delta):
+	
 	if game_started:		
 		if dead == false:
+			hit()
 			player_movement()		
 			
 
@@ -58,7 +61,7 @@ func player_movement():
 		if Input.is_action_just_pressed("ui_down"):
 			motion.y = 200
 		else:
-			motion.y = 0
+			motion = Vector2(0,0)
 		jump()
 	else:
 		is_grabbing = false
@@ -210,7 +213,13 @@ func flip_collision(object, side, flip_cast=false):
 			object.cast_to.x *= -1
 	
 func is_grabbing_ledge():
-	if $LedgeCast.is_colliding() and has_torch == false:
-		if not $LedgeCastNot.is_colliding():			
+	if $LedgeCast.is_colliding():
+		if not $LedgeCastNot.is_colliding():
 			return true
+	is_grabbing = false
 	return false
+
+func hit():
+	if Input.is_action_just_pressed("ui_cancel"):
+		var blood = BLOOD_HIT.instance()
+		add_child(blood)

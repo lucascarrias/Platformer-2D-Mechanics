@@ -336,8 +336,12 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="BiggerSquare" type="TileMap" parent="."]
 tile_set = SubResource( 13 )
+collision_layer = 37
+collision_mask = 37
 format = 1
 
 [node name="Platforms" type="TileMap" parent="."]
 tile_set = SubResource( 26 )
+collision_layer = 37
+collision_mask = 37
 format = 1
