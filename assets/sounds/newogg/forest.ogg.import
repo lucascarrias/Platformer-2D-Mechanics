@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/forest.ogg-ca3ddc357723fd330e771506137a6803.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/newogg/forest.ogg"
+dest_files=[ "res://.import/forest.ogg-ca3ddc357723fd330e771506137a6803.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

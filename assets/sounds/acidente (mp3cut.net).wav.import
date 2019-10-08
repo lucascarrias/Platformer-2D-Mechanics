@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/acidente (mp3cut.net).wav-34445d8da9be040e23740f534865b74f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/acidente (mp3cut.net).wav"
+dest_files=[ "res://.import/acidente (mp3cut.net).wav-34445d8da9be040e23740f534865b74f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

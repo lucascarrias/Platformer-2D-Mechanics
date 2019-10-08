@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fogo (online-audio-converter.com).ogg-7e74a8e6b5f014d7e0b5f340c114906a.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/newogg/fogo (online-audio-converter.com).ogg"
+dest_files=[ "res://.import/fogo (online-audio-converter.com).ogg-7e74a8e6b5f014d7e0b5f340c114906a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

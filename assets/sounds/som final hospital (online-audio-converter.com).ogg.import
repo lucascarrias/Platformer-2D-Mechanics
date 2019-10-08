@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/som final hospital (online-audio-converter.com).ogg-c2914d45367301ff63bf1c7dbcfe9649.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/som final hospital (online-audio-converter.com).ogg"
+dest_files=[ "res://.import/som final hospital (online-audio-converter.com).ogg-c2914d45367301ff63bf1c7dbcfe9649.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

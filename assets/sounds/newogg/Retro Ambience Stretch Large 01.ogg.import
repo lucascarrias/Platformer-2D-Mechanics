@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Retro Ambience Stretch Large 01.ogg-57fcd2b3daca1e6a9547793f99434ebb.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/newogg/Retro Ambience Stretch Large 01.ogg"
+dest_files=[ "res://.import/Retro Ambience Stretch Large 01.ogg-57fcd2b3daca1e6a9547793f99434ebb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/morte coracao beep.wav-5cb1048431e152e0e278c80b2af76382.sample"
+
+[deps]
+
+source_file="res://assets/sounds/morte coracao beep.wav"
+dest_files=[ "res://.import/morte coracao beep.wav-5cb1048431e152e0e278c80b2af76382.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
