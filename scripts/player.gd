@@ -78,7 +78,7 @@ func player_movement():
 	run()
 	walk()
 	#Check on floor
-	if player_on_floor():
+	if is_on_floor():
 		if friction:
 			motion.x = lerp(motion.x, 0, 0.5)
 		motion.y = 0
