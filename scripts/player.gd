@@ -10,6 +10,7 @@ const WALK_ACELERATION = ACCELERATION/2
 const MAX_WALK_SPEED = MAX_SPEED/2
 var motion = Vector2()
 var friction = false
+var jumping = false
 #Checkpoint vars
 var current_cp = 0 
 var cp_position = Vector2(0,0)
@@ -85,6 +86,7 @@ func player_movement():
 		jump()
 		
 	else:
+		coyote_jump()
 		if is_grabbing == false:
 			jump_break()			
 			if motion.y < 0:
@@ -194,13 +196,21 @@ func player_on_floor():
 	return $CheckFloor.is_colliding() or $CheckFloor2.is_colliding()
 
 func jump():
+	if is_on_floor() and jumping:
+		jumping = false
 	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_select"):
 		motion.y = 0
 		motion.y += JUMP_HEIGHT - abs(motion.x)/2
+		jumping = true	
 
 func jump_break():
 	if Input.is_action_just_released("ui_up") and motion.y < 0:
 		motion.y = lerp(motion.y, 0, 0.5)
+
+func coyote_jump():	
+	if is_on_floor() == false and (motion.y > 0 and motion.y < GRAVITY*10):
+		if jumping == false:
+			jump()
 
 func flip_collision(object, side, flip_cast=false):
 	if object.position.x < 0 and side == "right":

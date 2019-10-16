@@ -13,15 +13,15 @@
 [ext_resource path="res://assets/Player/Idle/idle_10.png" type="Texture" id=11]
 [ext_resource path="res://assets/Player/Idle/idle_11.png" type="Texture" id=12]
 [ext_resource path="res://assets/Player/Idle/idle_12.png" type="Texture" id=13]
-[ext_resource path="res://assets/Player/Jump/landing outline.png" type="Texture" id=14]
-[ext_resource path="res://assets/Player/Run/frame_0_delay-0.1s.png" type="Texture" id=15]
-[ext_resource path="res://assets/Player/Run/frame_1_delay-0.1s.png" type="Texture" id=16]
-[ext_resource path="res://assets/Player/Run/frame_2_delay-0.1s.png" type="Texture" id=17]
-[ext_resource path="res://assets/Player/Run/frame_3_delay-0.1s.png" type="Texture" id=18]
-[ext_resource path="res://assets/Player/Run/frame_4_delay-0.1s.png" type="Texture" id=19]
-[ext_resource path="res://assets/Player/Run/frame_5_delay-0.1s.png" type="Texture" id=20]
-[ext_resource path="res://assets/Player/Run/frame_6_delay-0.1s.png" type="Texture" id=21]
-[ext_resource path="res://assets/Player/Run/frame_7_delay-0.1s.png" type="Texture" id=22]
+[ext_resource path="res://assets/Player/Run/frame_0_delay-0.1s.png" type="Texture" id=14]
+[ext_resource path="res://assets/Player/Run/frame_1_delay-0.1s.png" type="Texture" id=15]
+[ext_resource path="res://assets/Player/Run/frame_2_delay-0.1s.png" type="Texture" id=16]
+[ext_resource path="res://assets/Player/Run/frame_3_delay-0.1s.png" type="Texture" id=17]
+[ext_resource path="res://assets/Player/Run/frame_4_delay-0.1s.png" type="Texture" id=18]
+[ext_resource path="res://assets/Player/Run/frame_5_delay-0.1s.png" type="Texture" id=19]
+[ext_resource path="res://assets/Player/Run/frame_6_delay-0.1s.png" type="Texture" id=20]
+[ext_resource path="res://assets/Player/Run/frame_7_delay-0.1s.png" type="Texture" id=21]
+[ext_resource path="res://assets/Player/Jump/landing outline.png" type="Texture" id=22]
 [ext_resource path="res://assets/Player/Jump/jump outline.png" type="Texture" id=23]
 [ext_resource path="res://assets/Player/Ledge Grab/ledge_grab01.png" type="Texture" id=24]
 [ext_resource path="res://assets/Player/Ledge Grab/ledge_grab02.png" type="Texture" id=25]
@@ -37,22 +37,22 @@ animations = [ {
 "name": "Idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "Landing",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "Landing",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Run",
 "speed": 14.0
@@ -65,8 +65,8 @@ animations = [ {
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
-[sub_resource type="CapsuleShape2D" id=3]
-height = 10.9056
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 15.5441 )
 
 [sub_resource type="RayShape2D" id=4]
 length = 18.2983
@@ -120,7 +120,7 @@ disabled = true
 position = Vector2( 0, 2.5 )
 rotation = -3.14159
 scale = Vector2( 0.5, 1 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 visible = false
