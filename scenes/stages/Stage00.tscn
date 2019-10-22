@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/tilemaps/JungleTilemaps.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player_Jungle.tscn" type="PackedScene" id=2]
 
 [node name="Stage00" type="Node2D"]
 
